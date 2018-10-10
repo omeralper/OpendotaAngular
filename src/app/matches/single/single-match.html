@@ -1,0 +1,90 @@
+<div class="container">
+  <div class="row">
+    <ng-container *ngIf="matchOverview$ | async as matchOverview">
+      <div class="col-4">
+        {{matchOverview.radiant_win ? matchOverview.radiant_team?.name : matchOverview.dire_team?.name }} Victory
+      </div>
+      <div class="col-4">
+        {{matchOverview.radiant_score}}
+        {{matchOverview.game_mode}}
+        {{matchOverview.duration | secondsToMin}}
+        {{matchOverview.dire_score}}
+      </div>
+      <div class="col-4">
+        {{matchOverview.league.name}}
+        {{matchOverview.league.banner}}
+        {{matchOverview.league.tier}}
+        {{matchOverview.league.ticket}}
+      </div>
+    </ng-container>
+  </div>
+  <div class="row">
+    <ul class="nav justify-content-center">
+      <li class="chosen nav-item">
+        <a [routerLink]="['overview']">Overview</a>
+      </li>
+      <li class="chosen nav-item">
+        <a [routerLink]="['benchmarks']">Benchmarks</a>
+      </li>
+      <li class="chosen nav-item">
+        <a [routerLink]="['draft']">Draft</a>
+      </li>
+      <li class="chosen nav-item">
+        <a [routerLink]="['performances']">Performances</a>
+      </li>
+      <li class="chosen nav-item">
+        <a [routerLink]="['laning']">Laning</a>
+      </li>
+      <li class="chosen nav-item">
+        <a [routerLink]="['combat']">Combat</a>
+      </li>
+      <li class="chosen nav-item">
+        <a [routerLink]="['farm']">Farm</a>
+      </li>
+      <li class="chosen nav-item">
+        <a [routerLink]="['items']">Items</a>
+      </li>
+      <li class="chosen nav-item">
+        <a [routerLink]="['graphs']">Graphs</a>
+      </li>
+      <li class="chosen nav-item">
+        <a [routerLink]="['casts']">Casts</a>
+      </li>
+      <li class="chosen nav-item">
+        <a [routerLink]="['objectives']">Objectives</a>
+      </li>
+      <li class="chosen nav-item">
+        <a [routerLink]="['vision']">Vision</a>
+      </li>
+      <li class="chosen nav-item">
+        <a [routerLink]="['actions']">Actions</a>
+      </li>
+      <li class="chosen nav-item">
+        <a [routerLink]="['teamfights']">Teamfights</a>
+      </li>
+      <li class="chosen nav-item">
+        <a [routerLink]="['analysis']">Analysis</a>
+      </li>
+      <li class="chosen nav-item">
+        <a [routerLink]="['cosmetics']">Cosmetics</a>
+      </li>
+      <li class="chosen nav-item">
+        <a [routerLink]="['log']">Log</a>
+      </li>
+      <li class="chosen nav-item">
+        <a [routerLink]="['fantasy']">Fantasy</a>
+      </li>
+      <li class="chosen nav-item">
+        <a [routerLink]="['chat']">Chat</a>
+      </li>
+      <li class="chosen nav-item">
+        <a [routerLink]="['story']">Story</a>
+      </li>
+    </ul>
+  </div>
+  <div class="row">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+
+

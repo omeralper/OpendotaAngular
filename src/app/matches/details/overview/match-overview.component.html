@@ -1,0 +1,34 @@
+<ng-container *ngIf="matchOverview$ | async as matchOverview">
+  <div class="row">
+    Radiant Overview
+  </div>
+  <div class="row">
+    <app-table [players]="matchOverview.players" [columns]="columns" >
+    </app-table>
+  </div>
+
+  <div class="row">
+    <app-match-overview-table [matchOverview]="matchOverview" [isRadiant]="true">
+    </app-match-overview-table>
+  </div>
+  <div class="row">
+    <app-match-overview-pickbans [picks_bans]="matchOverview.picks_bans" [isRadiant]="false">
+    </app-match-overview-pickbans>
+  </div>
+  <div class="row">
+    <app-match-overview-table [matchOverview]="matchOverview" [isRadiant]="false">
+    </app-match-overview-table>
+  </div>
+  <div class="row">
+    <app-match-overview-pickbans [picks_bans]="matchOverview.picks_bans" [isRadiant]="true">
+    </app-match-overview-pickbans>
+  </div>
+  <div class="row">
+    <app-match-overview-ability-build [players]="matchOverview.players" [isRadiant]="true">
+    </app-match-overview-ability-build>
+  </div>
+  <div class="row">
+    <app-match-overview-ability-build [players]="matchOverview.players" [isRadiant]="false">
+    </app-match-overview-ability-build>
+  </div>
+</ng-container>

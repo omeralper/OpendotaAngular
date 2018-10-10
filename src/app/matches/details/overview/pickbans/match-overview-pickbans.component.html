@@ -1,0 +1,10 @@
+<div class="pick-bans">
+<ng-container *ngFor="let pick of picks_bans">
+    <section *ngIf="pick.team == isRadiant">
+      {{test()}}
+      <img [src]="heroApi + heroes[pick.hero_id].name + '_sb.png'"/>
+      <div *ngIf="!pick.is_pick" class="ban"></div>
+      <aside>{{pick.is_pick ? 'Pick' : 'Ban'}} {{pick.order + 1}}</aside>
+    </section>
+  </ng-container>
+</div>

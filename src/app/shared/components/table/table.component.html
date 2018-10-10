@@ -1,0 +1,23 @@
+<table class="table table-striped table-hover">
+  <thead>
+  <tr class="table-first-row">
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let player of players">
+    <th scope="row">
+      <app-player [player]="player"></app-player>
+    </th>
+    <div #container></div>
+    <td *ngFor="let column of columns;">
+      <ng-container *ngIf="column.component !== undefined; else defaultCell">
+        <ng-container #container *ngComponentOutlet="column.component"></ng-container>
+      </ng-container>
+      <ng-template #defaultCell>
+        {{player[column]}}
+      </ng-template>
+    </td>
+  </tr>
+  </tbody>
+</table>
+

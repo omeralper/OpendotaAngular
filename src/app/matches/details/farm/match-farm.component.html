@@ -1,0 +1,64 @@
+<div class="row">
+
+</div>
+<div class="row">
+  <ng-container *ngIf="matchOverview$ | async as matchOverview">
+    <table class="table">
+      <thead>
+      <tr>
+        <th scope="col">Player</th>
+        <th scope="col">LVL</th>
+        <th scope="col">K</th>
+        <th scope="col">D</th>
+        <th scope="col">A</th>
+        <th scope="col">GPM</th>
+        <th scope="col">XPM</th>
+        <th scope="col">LH</th>
+        <th scope="col">DN</th>
+        <th scope="col">HD</th>
+        <th scope="col">HH</th>
+        <th scope="col">TD</th>
+        <th scope="col">G</th>
+        <th scope="col">ITEMS</th>
+        <th scope="col">BUFFS</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let player of matchOverview.players">
+        <th scope="row">{{player.name}}</th>
+        <td>{{player.level}}</td>
+        <td>{{player.kills}}</td>
+        <td>{{player.deaths}}</td>
+        <td>{{player.assists}}</td>
+        <td>{{player.gold_per_min}}</td>
+        <td>{{player.xp_per_min}}</td>
+        <td>{{player.last_hits}}</td>
+        <td>{{player.denies}}</td>
+        <td>{{player.hero_damage}}</td>
+        <td>{{player.hero_healing}}</td>
+        <td>{{player.tower_damage}}</td>
+        <td>{{player.gold_t[player.gold_t.length-1]}}</td>
+        <td>{{player.item_0}}
+          {{player.item_1}}
+          {{player.item_2}}
+          {{player.item_3}}
+          {{player.item_4}}
+          {{player.item_5}}
+        </td>
+        <td>{{player.permanent_buffs}}</td>
+      </tr>
+
+      </tbody>
+    </table>
+  </ng-container >
+</div>
+<div class="row">
+
+</div>
+<div class="row">
+
+</div>
+<div class="row">
+
+</div>
+

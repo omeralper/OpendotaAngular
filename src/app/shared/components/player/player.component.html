@@ -1,0 +1,9 @@
+<div>
+  <img [src]="heroApi + heroes[player.hero_id].name + '_sb.png'" [appTooltip]="tooltip" />
+  {{player.name || player.personaname}}
+</div>
+<app-tooltip #tooltip>
+  <app-hero-tooltip [heroId]="player.hero_id">
+  </app-hero-tooltip>
+</app-tooltip>
+

@@ -1,0 +1,18 @@
+<table class="table">
+  <thead>
+  <tr>
+    <th scope="col">#id</th>
+    <th scope="col">Duration</th>
+    <th scope="col">Radiant</th>
+    <th scope="col">Dire</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let match of observableMatches | async">
+    <th scope="row"><a [routerLink]="[ '/matches', match.match_id ]">{{match.match_id }} </a></th>
+    <td>{{match.duration | secondsToMin}}</td>
+    <td>{{match.radiant_name }}</td>
+    <td>{{match.dire_name}}</td>
+  </tr>
+  </tbody>
+</table>

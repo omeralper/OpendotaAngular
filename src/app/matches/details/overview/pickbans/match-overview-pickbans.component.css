@@ -1,0 +1,28 @@
+.pick-bans{
+  display: flex;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0px 24px;
+}
+
+.pick-bans section{
+  position: relative;
+  margin: 5px;
+}
+
+.pick-bans aside{
+  background-color: black;
+  text-align: center;
+}
+
+.ban{
+  position: absolute;
+  z-index: 1;
+  left: -3px;
+  right: -3px;
+  top: 14px;
+  transform: rotate(-28deg);
+  border-top: 2px solid rgb(255, 76, 76);
+}

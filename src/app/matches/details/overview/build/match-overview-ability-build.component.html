@@ -1,0 +1,19 @@
+<table class="table table-striped table-hover">
+  <thead>
+  <tr class="table-first-row">
+    <td>Player</td>
+    <td *ngFor="let n of Array25; let i = index">{{i + 1}}</td>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let abilityList of abilityUpgrades">
+    {{test(abilityList)}}
+    <td>
+      <app-player [player]="abilityList.player"></app-player>
+    </td>
+    <td *ngFor="let ability of abilityList">
+      <img src={{getSource(ability)}} height="27px"/>
+    </td>
+  </tr>
+  </tbody>
+</table>
