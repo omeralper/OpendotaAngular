@@ -21,6 +21,7 @@ import {MatchOverviewPickbansComponent} from './details/overview/pickbans/match-
 import {MatchOverviewAbilityBuildComponent} from './details/overview/build/match-overview-ability-build.component';
 import {SharedModule} from '../shared/shared.module';
 
+
 @NgModule({
   declarations: [
     MatchComponent,

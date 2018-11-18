@@ -1,4 +1,4 @@
-import {Compiler, Component, Input, OnInit, QueryList, ViewChildren, ViewContainerRef} from '@angular/core';
+import {Compiler, Component, Input, OnInit, AfterViewInit, QueryList, ViewChildren, ViewContainerRef} from '@angular/core';
 import Player = match.Player;
 import {ComponentFactory} from '@angular/core/src/linker/component_factory';
 @Component({
@@ -19,12 +19,15 @@ export class TestComponent {
 export class TableComponent implements OnInit {
   @Input() players: Array<Player> = [];
   @Input() columns: Array<any> = [];
+   testParam = {player : { a : 1}};
+  // @ViewChildren('container', {read: ViewContainerRef}) container: QueryList<ViewContainerRef>;
 
-  @ViewChildren('container', {read: ViewContainerRef}) container: QueryList<ViewContainerRef>;
+  constructor() {
+    debugger;
+  }
 
   ngOnInit() {
     // this.columns = [{name: 'match_id'}, {name: 'player_slot'},
     //   {name: 'item_usage', component: TestComponent}];
   }
-
 }

@@ -15,7 +15,7 @@ export class MatchOverviewComponent implements OnInit {
   matchOverview$: Observable<Match>;
   matchId: number;
   items = items;
-  columns = ['match_id', {component: PlayerComponent, }, 'player_slot', 'ability_targets'];
+  columns = ['match_id', {component: PlayerComponent}, 'player_slot', 'ability_targets'];
 
   constructor(private matchApiService: MatchApiService, private route: ActivatedRoute, public sharedService: SharedService) {
 

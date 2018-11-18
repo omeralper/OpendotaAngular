@@ -1,4 +1,4 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {SharedService} from '../../shared.service';
 import {heroes} from '../../data/heroes';
 
@@ -6,12 +6,15 @@ import {heroes} from '../../data/heroes';
   selector: 'app-player',
   templateUrl: './player.component.html'
 })
-export class PlayerComponent {
+export class PlayerComponent implements OnInit {
   @Input() player;
   heroes = heroes;
   heroApi = this.sharedService.getHeroApi();
 
-  constructor(public sharedService: SharedService) {
+  constructor(public sharedService: SharedService) {}
 
+  ngOnInit() {
+    debugger; 
   }
+
 }
